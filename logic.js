@@ -211,7 +211,7 @@ let Logic = function() {
                     ++this.blackballCount;
                     this.blackballs[++this.blackballID] = this.getBlackBall(pos, this.levelBallChoice[lv], this.levelBallBounce[lv]);
                     ++this.blackballCount;
-                    this.blackballs[++this.blackballID] = this.getBlackBall(pos + 1, this.levelBallChoice[lv], this.levelBallBounce[lv], 1.2);
+                    this.blackballs[++this.blackballID] = this.getBlackBall(pos + 1, this.levelBallChoice[lv], this.levelBallBounce[lv], 1.5);
                     this.genRest = this.levelRest[difficulty];
                 }
             }
