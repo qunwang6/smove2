@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="background.js"></script>
+    <script src="logic.js"></script>
+    <script src="paintboard.js"></script>
+    <script src="event.js"></script>
+    <title>Smove</title>
+</head>
+<body bgcolor="#00bfff">
+    <div class="background">
+        <canvas id="bg_up"></canvas>
+        <canvas id="bg_mid"></canvas>
+        <canvas id="bg_down"></canvas>
+    </div>
+    <div class="paintboard">
+        <canvas id="maincanvas"></canvas>
+        <canvas id="item"></canvas>
+        <canvas id="whiteball"></canvas>
+        <canvas id="blackball"></canvas>
+        <div id="pause" onclick="gamePause();">II</div>
+        <div id="best">BEST: 0</div>
+        <div id="score">0</div>
+        <div id="level">LEVEL 1</div>
+        <div id="restart" onclick="gameRestart();">RESTART</div>
+        <div id="smove">SMOVE</div>
+        <div id="smove_start" onclick="main();">CLICK TO START</div>
+    </div>
+</body>
+<footer>
+    <script>
+        gamePreparation();
+    </script>
+</footer>
+</html>

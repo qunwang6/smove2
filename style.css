@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    z-index: -1;
+}
+
+.paintboard {
+    position: absolute;
+    margin: -8px;
+    border: 8px solid white;
+}
+
+#maincanvas {
+    position: absolute;
+    top: 38.88889%;
+    left: 30%;
+    margin: -6px;
+    border: 6px solid white;
+    border-radius: 100px;
+}
+
+#item {
+    position: absolute;
+    top: 38.88889%;
+    left: 30%;
+}
+
+#whiteball {
+    position: absolute;
+    top: 38.88889%;
+    left: 30%;
+    transition: opacity 2s linear .0s;
+}
+
+
+#blackball {
+    position: absolute;
+}
+
+#score {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+
+#best {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: white;
+    font-family: sans-serif;
+}
+
+#level {
+    position: absolute;
+    color: white;
+    opacity: .0;
+    transition: opacity .5s linear .5s;
+    font-family: sans-serif;
+}
+
+#restart {
+    position: absolute;
+    color: white;
+    opacity: .0;
+    transition: opacity 2s linear .0s;
+    cursor: pointer;
+    visibility: hidden;
+    font-family: sans-serif;
+}
+
+#smove {
+    color: white;
+    text-align: center;
+    margin-top: 10%;
+    font-family: sans-serif;
+}
+
+#smove_start {
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 40%;
+    transition: opacity 1s linear .0s;
+    opacity: .0;
+    font-family: sans-serif;
+}
+
+#pause {
+    color: white;
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+#bg_up {
+    position: absolute;
+    width: 100%;
+}
+
+#bg_mid {
+    position: absolute;
+    width: 100%;
+}
+
+#bg_down {
+    position: absolute;
+    width: 100%;
+}
