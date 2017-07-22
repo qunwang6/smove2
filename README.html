@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>README</title>
+</head>
+<body>
+<h1>SMOVE</h1>
+<h2>基本规则</h2>
+<p>白球位于3*3的方格中，使用四个方向键实现白球的移动，躲避黑球，获得加分方块。</p>
+<p>当前局的计分显示在左上角，并且显示历史最高分。注意历史最高分并不会存储在本地，即关闭页面重新打开后历史最高分清零。</p>
+<p>暂停按钮在右上角，只有在游戏开始时才会出现。</p>
+<p><br></p>
+<h2>开始界面</h2>
+<p>打开文件<code>index.html</code>。</p>
+<p>点击屏幕下方的<code>CLICK TO START</code>即可开始游戏。</p>
+<p><br></p>
+<h2>结束界面</h2>
+<p>当白球碰到黑球时游戏结束，白球缓慢消失，屏幕下方出现<code>RESTART</code>按钮，点击即可重新开始游戏。</p>
+<p><br></p>
+<h2>关卡设定</h2>
+<p>游戏有无限个大关卡，每个大关卡中有<code>5</code>个小关卡，在每个小关卡开始时，会在棋盘上方显示<code>LEVEL X-Y</code>的关卡名称，表示其为第<code>X</code>大关的第<code>Y</code>小关。</p>
+<p>每个小关中玩家需要获得<code>10</code>个加分方块遍可以进入下一小关。</p>
+<p>不同大关的相同编号的小关的黑球出现模式是相同的，但难度逐渐增大，表现在黑球产生的间隔和屏幕上最多允许出现的黑球个数。第<code>1</code>大关的难度最容易，第<code>8</code>大关的难度最难，从第<code>9</code>大关开始难度不再变化。</p>
+<p>每一小关的黑球出现模式如下：</p>
+<ul>
+<li>
+<p>LEVEL X-1：与原版游戏LEVEL 1相同，每组有<code>1</code>个黑球，速度中等；</p>
+</li>
+<li>
+<p>LEVEL X-2：与原版游戏LEVEL 2相同，每组有<code>2</code>个对称的黑球，速度中等；</p>
+</li>
+<li>
+<p>LEVEL X-3：与原版游戏LEVEL 3相同，每组有<code>2</code>个相邻的黑球，速度一个快一个中等；</p>
+</li>
+<li>
+<p>LEVEL X-4：与原版游戏LEVEL 4相同，每组有<code>2</code>个相邻的黑球，速度均为中等；</p>
+</li>
+<li>
+<p>LEVEL X-5：每组有<code>1</code>个黑球，可以在整个屏幕运动，遇到边界会弹回（最多<code>4</code>次），速度快。</p>
+</li>
+</ul>
+<p><br></p>
+<h2>界面设定</h2>
+<p>屏幕自适应。</p>
+<p>游戏以白色为主色调，简洁明了。</p>
+<p>切换小关时，屏幕的背景颜色会渐变变化，每类小关一种背景颜色。</p>
+<p>游戏内有非常多的其它渐显渐隐效果。</p>
+<p><br></p>
+<h2>项目架构</h2>
+<ul>
+<li>
+<p><code>index.html</code>存放网页结构；</p>
+</li>
+<li>
+<p><code>style.css</code>存放网页样式；</p>
+</li>
+<li>
+<p><code>background.js</code>绘制网页背景；</p>
+</li>
+<li>
+<p><code>logic.js</code>定义了游戏中的部件（黑球，白球等）的类以及接口；</p>
+</li>
+<li>
+<p><code>paintboard.js</code>通过部件的接口获取参数，绘制游戏界面；</p>
+</li>
+<li>
+<p><code>event.js</code>用来处理事件。</p>
+</li>
+</ul>
+<p><br></p>
+<h2>移动端</h2>
+<p>做到了移动端的适配。滑动/点击屏幕进行对应的操作。</p>
+<p>在iPhone的Safari上测试成功。</p>
+<p><br></p>
+<h2>渲染优化</h2>
+<p>每种部件分别使用一个canvas对象。</p>
+<p>黑球、白球（移动时的动画）和加分方块使用timer计时重绘。</p>
+<p>其它界面只在网页大小发生改变时重绘。</p>
+</body>
+<footer>
+</footer>
+</html>
