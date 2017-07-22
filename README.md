@@ -55,17 +55,17 @@
 <br>
 
 ## 项目架构
-*`index.html`存放网页结构；
+* `index.html`存放网页结构；
 
-*`style.css`存放网页样式；
+* `style.css`存放网页样式；
 
-*`background.js`绘制网页背景；
+* `background.js`绘制网页背景；
 
-*`logic.js`定义了游戏中的部件（黑球，白球等）的类以及接口；
+* `logic.js`定义了游戏中的部件（黑球，白球等）的类以及接口；
 
-*`paintboard.js`通过部件的接口获取参数，绘制游戏界面；
+* `paintboard.js`通过部件的接口获取参数，绘制游戏界面；
 
-*`event.js`用来处理事件。
+* `event.js`用来处理事件。
 
 <br>
 
